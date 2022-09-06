@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+
+:root{
+  --red:#EE3623;
+}
+
+*{
+  font-family: 'Roboto', sans-serif; /* To set the font-family for the entire website */
+  margin:0; padding: 0;
+  box-sizing: border-box;
+  border:none; outline: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 500; /* The font weight for all wordings in the entire website */
+  transition:.5s linear;
+}
+
+*::selection{  /*To define the color when highlighting anything */
+  background:var(--red); /*The highlighting color should be red */
+}
+
+html{
+  font-size: 100%; /*font-size of the entire website wordings*/
+  overflow-x: hidden;
+}
+.card:hover {
+    transform: scale(1.1);
+  }
+  .card {
+  overflow: hidden;
+  position: relative;
+}
+.card:after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(255,255,255,0.3);
+  opacity: 0;
+  transition: opacity .25s;
+}
+.card img {
+  transition: transform .25s;
+  width: 100%;
+}
+.card:hover img {
+  transform: scale(1.2);
+}
+.card:hover:after {
+  opacity: 1;
+}
+
+/* .col-md-6{
+    margin-bottom: 50px;
+} */
